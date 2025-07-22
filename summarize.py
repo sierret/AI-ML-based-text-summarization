@@ -10,23 +10,6 @@ from nltk.tokenize import sent_tokenize
 from sklearn.metrics.pairwise import cosine_similarity
 import networkx as nx
 
-def viewDataStats(data):
-    if (isinstance(data, pd.DataFrame)):
-	total_nan = data.isna().sum().sum()
-        print("Data Dimensions : %d rows, %d columns" % (data.shape[0], data.shape[1]))
-	print("Total Non-Numeric Values : %d " % (total_nan))
-	print("Name", "Type", "#Distinct", "NAN Values")
-	columns = data.columns
-        types = data.dtypes
-        unique = data.nunique()
-        nan_values = data.isna().sum()
-        for i in range(len(data.columns)):
-            print(columns[i], types[i], unique[i], nan_values[i])
-        
-    else:
-        print("Not a Dataframe:" + str(type(data)))
-        exit(0)
-
 def remove_stopwords(sen):
     sen_new = " ".join([i for i in sen if i not in stop_words])
     return sen_new
