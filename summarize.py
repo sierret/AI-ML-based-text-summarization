@@ -1,5 +1,4 @@
 import pandas as pd 
-import re 
 import numpy as np 
 import nltk 
 from nltk.corpus import stopwords
