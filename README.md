@@ -1,4 +1,4 @@
 # AI-ML-based-text-summarization
 An AI/ML based solution to summary solution.
 
-Text is first cleaned with non-alphanumeric chars and stopwords removed.Then splits text into word tokens that are then used to form sentence vectors. The sentence vectors then are used to form a similarity matrix. The ranking in the similarity matrix.  page rank is then used on the sort scores of nodes in the matrix and determine a summary. Sample csv is provided.
+Text is first cleaned with non-alphanumeric chars with stopwords removed and put in a list of sentences.The Glove dataset of word vectors is imported with each word and it's corresponding vector space values. The sum of each word vector space values are summed to produce the sentence vector space values,each of which is put into a list. This list is then used to create a similarity matrix, that is then ranked and sorted to determine a summary by sort order. Sample csv is provided.
